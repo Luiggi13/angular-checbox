@@ -1,0 +1,15 @@
+<p *ngFor="let column of columnDefinitions">
+  <label>
+    {{column.def}}
+  <input type="checkbox" [(ngModel)]="column.showItem" (ngModelChange)="showFilteredColumns()">
+  </label>
+</p>
+<button (click)="rePintarCols()">Show all</button>
+<h1>ColumnDefinitions {{columnDefinitions.length}}:</h1>
+<pre>
+{{columnDefinitions | json}}
+</pre>
+<h1>_tmp {{_tmp.length}}:</h1>
+<pre>
+{{_tmp | json}}
+</pre>
